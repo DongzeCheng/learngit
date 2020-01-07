@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css2/index2.css" type="text/css"></link>
+<script type="text/javascript" src="plugins/angularjs/angular.min.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript" src="js/controller/goodsController.js"></script>
+<script type="text/javascript" src="js/service/goodsService.js"></script>
+<script type="text/javascript" src="js/service/uploadService.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="goodsController" ng-init="getList()">
+<table>
+     <tr>
+          <td>序号</td>
+          <td>商品名称</td>
+          <td>商品库存</td>
+          <td>商品单价</td>
+          <td>商品描述</td>
+          <td>操作</td>
+     </tr>
+     <tr ng-repeat="entity in list">
+          <td>{{$index+1}}</td>
+          <td>{{entity.name}}</td>
+          <td>{{entity.num}}</td>
+          <td>{{entity.price}}</td>
+          <td>{{entity.content}}</td>
+          <td>
+               <button><a href="/dwonorder.html#?id={{entity.id}}">购买</a></button>
+          </td>
+     </tr>
+</table>
+</body>
+</html>

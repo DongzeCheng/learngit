@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css2/index2.css" type="text/css"></link>
+<script type="text/javascript" src="plugins/angularjs/angular.min.js"></script>
+<script type="text/javascript" src="../js/base.js"></script>
+<script type="text/javascript" src="../js/controller/orderController.js"></script>
+<script type="text/javascript" src="../js/service/orderService.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="orderController" ng-init="back()">
+<table>
+     <tr>
+          <td>商品名称</td>
+          <td>
+               <input type="text" ng-model="entity.name" disabled="disabled">
+          </td>
+     </tr>
+     <tr>
+          <td>商品库存</td>
+          <td>
+               <input type="text" ng-model="entity.num" disabled="disabled">
+          </td>
+     </tr>
+     <tr>
+          <td>商品单价</td>
+          <td>
+               <input type="text" ng-model="entity.price" disabled="disabled">
+          </td>
+     </tr>
+     <tr>
+          <td>购买数量</td>
+          <td>
+               <input type="text" ng-model="entitys.sum">
+          </td>
+     </tr>
+     <tr>
+          <td>订单金额</td>
+          <td>
+               <input type="text" ng-model="entitys.money">
+          </td>
+     </tr>
+     <tr>
+          <td>收件人姓名</td>
+          <td>
+               <input type="text" ng-model="entitys.name">
+          </td>
+     </tr>
+     <tr>
+          <td>收件人电话</td>
+          <td>
+               <input type="text" ng-model="entitys.tel">
+          </td>
+     </tr>
+     <tr>
+          <td>收件人地址</td>
+          <td>
+               <input type="text" ng-model="entitys.address">
+          </td>
+     </tr>
+     <tr>
+          <td colspan="2">
+               <input type="button" value="提交" ng-click="save()">
+          </td>
+     </tr>
+</table>
+</body>
+</html>

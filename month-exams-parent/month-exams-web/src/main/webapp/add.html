@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css2/index2.css" type="text/css"></link>
+<script type="text/javascript" src="plugins/angularjs/angular.min.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript" src="js/controller/goodsController.js"></script>
+<script type="text/javascript" src="js/service/goodsService.js"></script>
+<script type="text/javascript" src="js/service/uploadService.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="goodsController">
+<table>
+     <tr>
+          <td>商品名称</td>
+          <td>
+               <input type="text" ng-model="entity.name">
+          </td>
+     </tr>
+     <tr>
+          <td>上传图片</td>
+          <td>
+               <input type="file" name="file" id="file">
+               <button ng-click="upload()">上传</button>
+               <img alt="" src="{{entity.url}}" width="80px" height="80px">
+          </td>
+     </tr>
+     <tr>
+          <td>品牌</td>
+          <td>
+               <input type="text" ng-model="entity.pinpai">
+          </td>
+     </tr>
+     <tr>
+          <td>类型</td>
+          <td>
+               <input type="text" ng-model="entity.type">
+          </td>
+     </tr>
+     <tr>
+          <td>价格</td>
+          <td>
+               <input type="text" ng-model="entity.price">
+          </td>
+     </tr>
+     <tr>
+          <td>数量</td>
+          <td>
+               <input type="text" ng-model="entity.num">
+          </td>
+     </tr>
+     <tr>
+          <td>商品描述</td>
+          <td>
+               <input type="text" ng-model="entity.content">
+          </td>
+     </tr>
+     <tr>
+          <td colspan="2">
+               <input type="button" value="提交" ng-click="save()">
+          </td>
+     </tr>
+</table>
+</body>
+</html>

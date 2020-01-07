@@ -1,0 +1,6 @@
+com\month\exams\controller\OrderController.class
+com\month\service\AuthenticationProviderImpl.class
+com\month\exams\controller\UploadController.class
+com\month\exams\controller\UserController.class
+com\month\service\UserDetailsServiceImpl.class
+com\month\exams\controller\GoodsController.class

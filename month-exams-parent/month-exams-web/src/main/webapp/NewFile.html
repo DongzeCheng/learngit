@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script type="text/javascript">
+     $(function() {
+		$.post(
+		"../user/role.do",
+		function (re) {
+			if (re==0) {
+				location.href="/goods.html";
+			}else{
+				location.href="/order.html";
+			}
+		},
+		"text"
+		)
+	 })
+</script>
+</head>
+<body>
+
+</body>
+</html>

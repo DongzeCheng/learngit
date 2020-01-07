@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css2/index2.css" type="text/css"></link>
+<script type="text/javascript" src="plugins/angularjs/angular.min.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript" src="js/controller/goodsController.js"></script>
+<script type="text/javascript" src="js/service/goodsService.js"></script>
+<script type="text/javascript" src="js/service/uploadService.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="goodsController" ng-init="getList()">
+<button><a href="/add.html">添加</a></button>
+<table>
+     <tr>
+          <td>编号</td>
+          <td>商品名称</td>
+          <td>图片</td>
+          <td>类型</td>
+          <td>品牌</td>
+          <td>价格</td>
+          <td>状态</td>
+          <td>库存</td>
+          <td>操作</td>
+     </tr>
+     <tr ng-repeat="entity in list">
+          <td>{{$index+1}}</td>
+          <td>{{entity.name}}</td>
+          <td>
+               <img alt="" src="{{entity.url}}" width="80px" height="80px"> 
+          </td>
+          <td>{{entity.type}}</td>
+          <td>{{entity.pinpai}}</td>
+          <td>{{entity.price}}</td>
+          <td>
+               <div ng-if="entity.zt==0">
+                                    下架
+               </div>
+               <div ng-if="entity.zt==1">
+                                    上架
+               </div>
+          </td>
+          <td>{{entity.num}}</td>
+          <td ng-if="entity.zt==0">
+               <button ng-click="up(entity.id)">上架</button>
+          </td>
+          <td ng-if="entity.zt==1">
+               <button ng-click="dwon(entity.id)">下架</button>
+          </td>
+     </tr>
+</table>
+</body>
+</html>
